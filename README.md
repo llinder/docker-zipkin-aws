@@ -12,7 +12,13 @@ Currently, this adds SQS Collector support
 
 ## Running
 
-TODO: link to variables used and show docker run -e for the minimum needed
+Zipkin AWS has no dependencies beyond the optional AWS services that you choose to use.
+
+Running a minimal Zipkin server that consumes from SQS with in-memory storage:
+
+`docker run -p 9411:9411 -e SQS_QUEUE_URL="https://sqs.us-east-1.amazonaws.com/123456789/my-zipkin-queue" -e SQS_AWS_ACCESS_KEY_ID="XqgzeGF3tC7u" -e SQS_AWS_SECRET_ACCESS_KEY="F75uEjHM7ykLzXDJMTHrQ5Jr" openzipkin/zipkin-aws:latest`
+
+See the ui at (docker ip):9411
 
 ## Configuration
 
